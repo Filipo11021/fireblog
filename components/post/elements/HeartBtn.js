@@ -10,14 +10,12 @@ const HeartBtn = ({ postRef }) => {
   const { user } = useContext(UserCtx);
 
   useEffect(() => {
-      console.log('effect')
       if(user){
           setHeartRef(doc(postRef, "hearts", user.uid))
       }
   }, [user, postRef])
 
   useEffect(() => {
-    console.log('effect')
     async function checkHeart() {
       const res = await getDoc(heartRef);
       setHeartDoc(res);
