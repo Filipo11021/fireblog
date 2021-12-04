@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
       posts,
       postsEnd,
     },
-    revalidate: 1000,
+    revalidate: 1,
   };
 };
 
