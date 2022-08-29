@@ -1,4 +1,4 @@
-const Loader = ({ show }) => {
+const Loader = ({ show = true }) => {
   return show ? <div className="loader"></div> : null;
 };
 
