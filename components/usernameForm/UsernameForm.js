@@ -1,5 +1,6 @@
 import { doc, getDoc, writeBatch } from "firebase/firestore";
 import debounce from "lodash.debounce";
+import { useRouter } from "next/router";
 import { useCallback, useContext, useEffect, useState } from "react";
 import { UserCtx } from "../../lib/ctx";
 import { db } from "../../lib/firebase";
@@ -9,6 +10,7 @@ export default function UsernameForm() {
   const [usernameValue, setusernameValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [loading, setLoading] = useState(false);
+  const router = useRouter()
 
   const { user, username } = useContext(UserCtx);
 
@@ -61,6 +63,7 @@ export default function UsernameForm() {
     });
     batch.set(usernameDoc, { uid: user.uid });
     await batch.commit();
+    router.push("/")
   };
 
   return (
