@@ -10,7 +10,7 @@ export default function UsernameForm() {
   const [usernameValue, setusernameValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [loading, setLoading] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
 
   const { user, username } = useContext(UserCtx);
 
@@ -63,7 +63,7 @@ export default function UsernameForm() {
     });
     batch.set(usernameDoc, { uid: user.uid });
     await batch.commit();
-    router.push("/")
+    router.push("/");
   };
 
   return (

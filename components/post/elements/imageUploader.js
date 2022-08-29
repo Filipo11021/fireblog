@@ -1,8 +1,4 @@
-import {
-  getDownloadURL,
-  ref,
-  uploadBytesResumable,
-} from "@firebase/storage";
+import { getDownloadURL, ref, uploadBytesResumable } from "@firebase/storage";
 import { useContext, useState } from "react";
 import { UserCtx } from "../../../lib/ctx";
 import { storage } from "../../../lib/firebase";
@@ -34,7 +30,9 @@ const ImageUploader = () => {
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         setProgress(progress);
       },
-      (error) => {console.log(error)},
+      (error) => {
+        console.log(error);
+      },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((URL) => {
           setDownloadURL(URL);
@@ -42,7 +40,6 @@ const ImageUploader = () => {
         });
       }
     );
-
   };
 
   return (
@@ -62,7 +59,7 @@ const ImageUploader = () => {
           </label>
         </>
       )}
-      
+
       {downloadURL && (
         <code className="upload-snippet">{`![alt](${downloadURL})`}</code>
       )}

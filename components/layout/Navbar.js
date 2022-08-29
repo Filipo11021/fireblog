@@ -29,10 +29,12 @@ const Navbar = () => {
         {username && user && (
           <>
             <li className="push-left">
-              <button onClick={logout} className="m-end-1">sign out</button>
+              <button onClick={logout} className="m-end-1">
+                sign out
+              </button>
             </li>
 
-            <li className="push-left write-posts-btn">
+            <li className="write-posts-btn">
               <Link href="/admin">
                 <a>
                   <button className="btn-blue m-end-1">Write Posts</button>

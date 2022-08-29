@@ -104,10 +104,6 @@ button {
   border: none;
   color: var(--color-text);
   padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
   text-decoration: none;
   font-family: "Noto Sans", sans-serif;
   font-weight: bold;
@@ -130,27 +126,27 @@ button[disabled] {
   cursor: not-allowed;
 }
 
-button.btn-blue {
+.btn-blue {
   background-color: var(--color-blue);
   color: white;
 }
 
-button.btn-red {
+.btn-red {
   background-color: var(--color-red);
   color: white;
 }
 
-button.btn-green {
+.btn-green {
   background-color: var(--color-green);
   color: white;
 }
 
-button.btn-white {
+.btn-white {
   background-color: white;
   color: var(--color-text);
 }
 
-button.btn-logo {
+.btn-logo {
   background-color: var(--color-text);
   color: white;
   text-transform: uppercase;
@@ -280,6 +276,25 @@ input[type="file"] {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center
+}
+
+.grid {
+  display: grid;
+}
+
+.mx-auto {
+  margin: 0 auto;
 }
 
 .hidden {

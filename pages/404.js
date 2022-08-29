@@ -5,9 +5,7 @@ const Error = () => {
     <main>
       <h1>404 - that page does not seen to exist</h1>
       <Link href="/">
-        <a>
-          <button className="btn-blue">Go home</button>
-        </a>
+        <a className="btn-blue btn">Go home</a>
       </Link>
     </main>
   );

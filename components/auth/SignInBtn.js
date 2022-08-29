@@ -11,13 +11,15 @@ export default function SignInBtn() {
   };
 
   return (
-    <div className="wrap-sign-in">
-      <button className="btn-white" onClick={singInWithGoogle}>
-        Sign in with Google
-      </button>
-      <button onClick={() => signInAnonymously(auth)}>
-        Sign in Anonymously
-      </button>
+    <div className="flex justify-center">
+      <div className="grid">
+        <button className="btn-white" onClick={singInWithGoogle}>
+          Sign in with Google
+        </button>
+        <button onClick={() => signInAnonymously(auth)}>
+          Sign in Anonymously
+        </button>
+      </div>
     </div>
   );
 }

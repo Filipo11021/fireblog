@@ -11,7 +11,7 @@ import useCheckPageIsLoading from "../hooks/useCheckPageIsLoading";
 
 function MyApp({ Component, pageProps }) {
   const userData = useUserData();
-  const pageIsLoading = useCheckPageIsLoading()
+  const pageIsLoading = useCheckPageIsLoading();
 
   return (
     <UserCtx.Provider value={userData}>

@@ -10,6 +10,7 @@ export default function SignOutBtn() {
         signOut(auth);
         router.reload();
       }}
+      className="mx-auto"
     >
       Sign Out
     </button>
